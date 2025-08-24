@@ -20,12 +20,10 @@ export function StorageTest() {
       // Force re-initialization to ensure adapter is up to date
       await storageManager.ensureInitialized();
       const info = await storageManager.getStorageInfo();
-      console.log('Storage info loaded:', info);
       setStorageInfo(info);
       
       if (info.available) {
         const fileList = await storageManager.listFiles();
-        console.log('Files loaded:', fileList);
         setFiles(fileList);
       } else {
         setFiles([]);
@@ -41,9 +39,7 @@ export function StorageTest() {
     setTestResult('');
     
     try {
-      console.log('Selecting folder...');
       const success = await storageManager.selectFolder();
-      console.log('Selection result:', success);
       
       if (success) {
         setTestResult('✅ Folder selected successfully!');
@@ -51,7 +47,6 @@ export function StorageTest() {
         // Debug: check if adapter has folder
         const hasFolder = storageManager.hasFolderSync();
         const folderPath = storageManager.getFolderPathSync();
-        console.log('After selection - hasFolder:', hasFolder, 'folderPath:', folderPath);
         
         // Refresh storage info
         await loadStorageInfo();

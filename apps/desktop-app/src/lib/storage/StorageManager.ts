@@ -96,10 +96,6 @@ export class StorageManager {
       };
     }
     
-    // Debug logging
-    console.log('StorageManager.getStorageInfo - adapter type:', this.adapter.constructor.name);
-    console.log('StorageManager.getStorageInfo - adapter hasFolder():', this.adapter.hasFolder());
-    console.log('StorageManager.getStorageInfo - adapter getFolderPath():', this.adapter.getFolderPath());
     
     return this.adapter.getStorageInfo();
   }
