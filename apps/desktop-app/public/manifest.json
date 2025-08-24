@@ -1,0 +1,49 @@
+{
+  "name": "Workshop Quotation Manager",
+  "short_name": "WQ Manager",
+  "description": "Desktop PWA for workshop quotations and cutting optimization",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "any",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Quote",
+      "short_name": "Quote",
+      "description": "Create a new quote",
+      "url": "/quotes/new",
+      "icons": [{ "src": "/icons/quote-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Cutting Optimizer",
+      "short_name": "Cutting",
+      "description": "Optimize cutting lists",
+      "url": "/cutting",
+      "icons": [{ "src": "/icons/cutting-icon.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
